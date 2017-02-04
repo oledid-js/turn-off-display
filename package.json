@@ -1,6 +1,6 @@
 {
   "name": "turn-off-display",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Turn off the display",
   "main": "src/index.js",
   "files": [
@@ -21,13 +21,13 @@
   "optionalDependencies": {
     "edge": "^5.0.0"
   },
-  "homepage": "https://github.com/oledid/turn-off-display-cli",
+  "homepage": "https://github.com/oledid/turn-off-display",
   "bugs": {
-    "url": "https://github.com/oledid/turn-off-display-cli/issues"
+    "url": "https://github.com/oledid/turn-off-display/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oledid/turn-off-display-cli.git"
+    "url": "https://github.com/oledid/turn-off-display.git"
   },
   "os": [
     "win32",
