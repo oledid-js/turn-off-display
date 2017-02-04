@@ -7,12 +7,12 @@ function main() {
 	const platform = os.platform();
 	switch (platform) {
 		case "win32": {
-			this.win32();
+			win32();
 			break;
 		}
 
 		case "darwin": {
-			this.darwin();
+			darwin();
 			break;
 		}
 

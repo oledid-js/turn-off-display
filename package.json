@@ -1,6 +1,6 @@
 {
   "name": "turn-off-display",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Turn off the display",
   "main": "src/index.js",
   "files": [
@@ -19,7 +19,7 @@
   "author": "Ole Morten Didriksen (https://github.com/oledid)",
   "license": "MIT",
   "optionalDependencies": {
-    "edge": "^5.9.2"
+    "edge": "^5.0.0"
   },
   "homepage": "https://github.com/oledid/turn-off-display-cli",
   "bugs": {
