@@ -1,0 +1,36 @@
+{
+  "name": "turn-off-display",
+  "version": "0.0.8",
+  "description": "Turn off the display",
+  "main": "src/index.js",
+  "files": [
+    "src"
+  ],
+  "engines": {
+    "node": ">=4"
+  },
+  "keywords": [
+    "turn off",
+    "display",
+    "screen",
+    "monitor",
+    "api"
+  ],
+  "author": "Ole Morten Didriksen (https://github.com/oledid)",
+  "license": "MIT",
+  "optionalDependencies": {
+    "edge": "^5.9.2"
+  },
+  "homepage": "https://github.com/oledid/turn-off-display-cli",
+  "bugs": {
+    "url": "https://github.com/oledid/turn-off-display-cli/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oledid/turn-off-display-cli.git"
+  },
+  "os": [
+    "win32",
+    "darwin"
+  ]
+}

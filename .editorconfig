@@ -1,0 +1,34 @@
+root = true
+
+[*]
+indent_style = tab
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = false
+insert_final_newline = false
+indent_size = 4
+
+[*.{config,yml,json}]
+indent_style = space
+indent_size = 2
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{js,jsx,ts,tsx,cs,html,cshtml,py,md,ahk}]
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.ahk]
+end_of_line = crlf
+
+[cli.js]
+end_of_line = lf
+
+# Ignore paths
+[**/jspm_packages/**,**/node_modules/**,*.d.ts]
+charset = none
+end_of_line = none
+insert_final_newline = none
+trim_trailing_whitespace = none
+indent_style = none
+indent_size = none
