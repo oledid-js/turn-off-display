@@ -1,6 +1,6 @@
 {
   "name": "turn-off-display",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Turn off the display",
   "main": "src/index.js",
   "files": [
