@@ -37,7 +37,7 @@ function win32() {
 	const ffi = require("ffi");
 
 	const user32 = ffi.Library("user32", {
-		SendMessage: ["int", ["ulong", "uint", "long"]]
+		SendMessageW: ["int", ["ulong", "uint", "long", "long"]]
 	});
 
 	const HWND_BROADCAST = 0xffff;
@@ -45,7 +45,7 @@ function win32() {
 	const SC_MONITORPOWER = 0xf170;
 	const POWER_OFF = 0x0002;
 
-	user32.SendMessage(HWND_BROADCAST, WM_SYSCOMMAND, SC_MONITORPOWER, POWER_OFF);
+	user32.SendMessageW(HWND_BROADCAST, WM_SYSCOMMAND, SC_MONITORPOWER, POWER_OFF);
 }
 
 function darwin() {
