@@ -28,6 +28,10 @@ catch (err) {
 }
 ```
 
+## Troubleshooting
+If node-gyp fails on Windows:
+Check out the [node-gyp documentation](https://github.com/nodejs/node-gyp) and [felixrieseberg/windows-build-tools](https://github.com/felixrieseberg/windows-build-tools)
+
 
 ## Related
 * [oledid-js/turn-off-display-cli](https://github.com/oledid-js/turn-off-display-cli) - CLI for this module
