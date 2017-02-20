@@ -1,13 +1,13 @@
 {
   "name": "turn-off-display",
-  "version": "0.0.11",
+  "version": "0.1.0",
   "description": "Turn off the display",
   "main": "src/index.js",
   "files": [
     "src"
   ],
-  "engines": {
-    "node": ">=4"
+  "scripts": {
+    "postinstall": "node src/install.js"
   },
   "keywords": [
     "turn off",
@@ -18,19 +18,12 @@
   ],
   "author": "Ole Morten Didriksen (https://github.com/oledid)",
   "license": "MIT",
-  "optionalDependencies": {
-    "edge": "^5.0.0"
-  },
-  "homepage": "https://github.com/oledid/turn-off-display",
+  "homepage": "https://github.com/oledid-js/turn-off-display",
   "bugs": {
-    "url": "https://github.com/oledid/turn-off-display/issues"
+    "url": "https://github.com/oledid-js/turn-off-display/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/oledid/turn-off-display.git"
-  },
-  "os": [
-    "win32",
-    "darwin"
-  ]
+    "url": "https://github.com/oledid-js/turn-off-display.git"
+  }
 }

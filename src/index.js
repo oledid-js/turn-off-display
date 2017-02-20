@@ -24,14 +24,28 @@ function main() {
 }
 
 function win32() {
-	let edge = require("edge");
+	// Credits: http://www.powershellmagazine.com/2013/07/18/pstip-how-to-switch-off-display-with-powershell/
+	//
+	//     Turn display off by calling WindowsAPI.
+	//
+	//     SendMessage(HWND_BROADCAST,WM_SYSCOMMAND, SC_MONITORPOWER, POWER_OFF)
+	//     HWND_BROADCAST  0xffff
+	//     WM_SYSCOMMAND   0x0112
+	//     SC_MONITORPOWER 0xf170
+	//     POWER_OFF       0x0002
 
-	const runWithDotNet = edge.func(path.join(__dirname, "TurnOffDisplayViaWinAPI.cs"));
-	runWithDotNet({}, error => {
-		if (error) {
-			throw error;
-		}
+	const ffi = require("ffi");
+
+	const user32 = ffi.Library("user32", {
+		SendMessage: ["int", ["ulong", "uint", "long"]]
 	});
+
+	const HWND_BROADCAST = 0xffff;
+	const WM_SYSCOMMAND = 0x0112;
+	const SC_MONITORPOWER = 0xf170;
+	const POWER_OFF = 0x0002;
+
+	user32.SendMessage(HWND_BROADCAST, WM_SYSCOMMAND, SC_MONITORPOWER, POWER_OFF);
 }
 
 function darwin() {
