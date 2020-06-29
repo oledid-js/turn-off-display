@@ -18,34 +18,17 @@ function main() {
 
 		default: {
 			throw Error("Platform " + platform + " is not supported yet. Pull requests are welcome.");
-			break;
 		}
 	}
 }
 
 function win32() {
-	// Credits: http://www.powershellmagazine.com/2013/07/18/pstip-how-to-switch-off-display-with-powershell/
-	//
-	//     Turn display off by calling WindowsAPI.
-	//
-	//     SendMessage(HWND_BROADCAST,WM_SYSCOMMAND, SC_MONITORPOWER, POWER_OFF)
-	//     HWND_BROADCAST  0xffff
-	//     WM_SYSCOMMAND   0x0112
-	//     SC_MONITORPOWER 0xf170
-	//     POWER_OFF       0x0002
-
-	const ffi = require("ffi");
-
-	const user32 = ffi.Library("user32", {
-		SendMessageW: ["int", ["ulong", "uint", "long", "long"]]
+	const execFile = require("child_process").execFile;
+	execFile("powershell", [path.join(__dirname, "turn-off-display-win32.ps1")], (error, stdout, stderr) => {
+		if (error) {
+			throw error;
+		}
 	});
-
-	const HWND_BROADCAST = 0xffff;
-	const WM_SYSCOMMAND = 0x0112;
-	const SC_MONITORPOWER = 0xf170;
-	const POWER_OFF = 0x0002;
-
-	user32.SendMessageW(HWND_BROADCAST, WM_SYSCOMMAND, SC_MONITORPOWER, POWER_OFF);
 }
 
 function darwin() {
@@ -63,3 +46,4 @@ function darwin() {
 }
 
 module.exports = main;
+
